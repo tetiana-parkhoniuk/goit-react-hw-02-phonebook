@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types';
-
-import React from 'react'
+import styles from 'components/ContactsListItem/ContactsListItem.module.css';
 
 export default function ContactsListItem({ id, name, number, onDeleteContact}) {
     return (
-        <li>
+        <li className={styles.contactItem}>
             {name}: {number}
             <button
-                onClick={()=> onDeleteContact(id)}
-            >Delete
+                className={styles.deleteBtn}
+                onClick={()=> onDeleteContact(id)}>Delete
             </button>
         </li>
     )

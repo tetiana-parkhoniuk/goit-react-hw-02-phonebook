@@ -1,9 +1,9 @@
-// import './App.css';
 import { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import ContactForm from 'components/ContactForm';
 import Filter from 'components/Filter';
 import ContactsList from 'components/ContactsList';
+import styles from 'App.module.css';
 
 export default class App extends Component {
   state = {
@@ -62,7 +62,7 @@ export default class App extends Component {
     const filteredContacts = this.getFilteredContacts();
 
     return (
-      <div>
+      <div className={styles.container}>
 
         <h1>Phonebook</h1>
 

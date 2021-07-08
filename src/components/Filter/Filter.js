@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
+import styles from 'components/Filter/Filter.module.css'
 
 export default function Filter({ id, value, onChange }) {
     return (
-        <>
-            <label htmlFor={id}>
+        <div className={styles.filterContainer}>
+            <label className={ styles.label} htmlFor={id}>
             Find contacts by name
           </label>
-          <input
-              type="text"
-              id={id}
-          value={value}
-          onChange={onChange}
+            <input
+                type="text"
+                id={id}
+                value={value}
+                className={styles.input}
+                onChange={onChange}
           />
             
-        </>
+        </div>
     )
 }
 
