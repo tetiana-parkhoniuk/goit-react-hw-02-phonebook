@@ -13,26 +13,26 @@ export default class ContactForm extends Component {
     numberInputId = uuidv4();
     
     handleInputChange = event => {
-    const { name, value } = event.currentTarget;
-    this.setState({
-      [name]: value,
-    })
-  }
+      const { name, value } = event.currentTarget;
+      this.setState({
+        [name]: value,
+      })
+    }
 
-  handleSubmit = event => {
-    event.preventDefault();
-      
-    this.props.onSubmit(this.state);
+    handleSubmit = event => {
+      event.preventDefault();
+        
+      this.props.onSubmit(this.state);
 
-    this.resetForm();
-  }
+      this.resetForm();
+    }
     
-      resetForm = () => {
-    this.setState({
-      name: '',
-      number:'',
-    })
-      }
+    resetForm = () => {
+      this.setState({
+        name: '',
+        number:'',
+      })
+    }
 
     render() {
         return (
